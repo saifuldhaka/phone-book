@@ -19,7 +19,7 @@ class PhonebookController extends Controller
      */
     public function index()
     {
-      $phonebook = Phonebook::paginate(1);
+      $phonebook = Phonebook::paginate(20);
       return view('phonebook.index', compact('phonebook'));
     }
 
