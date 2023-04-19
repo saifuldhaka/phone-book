@@ -9,12 +9,15 @@
                 <form action="{{ route('phonebook.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" class="form-control" id="last_name" name="last_name" required>
-                    </div>
-                    <div class="form-group">
                         <label for="first_name">First Name:</label>
                         <input type="text" class="form-control" id="first_name" name="first_name" required>
+                        @error('first_name')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name">
                     </div>
                     <div class="form-group">
                         <label for="phone_type">Phone Type:</label>
@@ -24,12 +27,16 @@
                                 <option value="{{ $phoneType }}">{{ $phoneType }}</option>
                             @endforeach
                         </select>
-
-
+                        @error('phone_type')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="number">Number:</label>
                         <input type="text" class="form-control" id="number" name="number" required>
+                        @error('number')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <br/>

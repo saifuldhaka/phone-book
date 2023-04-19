@@ -42,11 +42,8 @@ class PhonebookController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $validatedData = $request->validate([
           'first_name' => 'required',
-          'last_name' => 'required',
           'phone_type' => 'required',
           'number' => 'required',
         ]);
@@ -103,13 +100,12 @@ class PhonebookController extends Controller
           return redirect()->route('phonebook.index')->with('error', 'Contact not found.');
       }
       $request->validate([
-          'last_name' => 'required',
           'first_name' => 'required',
           'phone_type' => 'required',
           'number' => 'required',
       ]);
-      $phonebook->last_name = $request->last_name;
       $phonebook->first_name = $request->first_name;
+      $phonebook->last_name = $request->last_name;
       $phonebook->phone_type = $request->phone_type;
       $phonebook->number = $request->number;
       $phonebook->save();
