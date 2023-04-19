@@ -1,10 +1,10 @@
 @extends('layouts.app')
-
+@section('title', 'Phone List')
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Phonebook Entries</h1>
+                <h1>Phonebook</h1>
                   <a class="btn btn-primary" href="{{ route('phonebook.index') }}">View All Contacts</a>
                   <a class="btn btn-primary" href="{{ route('phonebook.create') }}">Create new contact</a>
 
@@ -27,13 +27,13 @@
                                 <td>{{ $entry->phone_type }}</td>
                                 <td>{{ $entry->number }}</td>
                                 <td>
-                                    <a class="btn btn-secondary" href="{{ route('phonebook.show', $entry) }}">View</a>
+                                    <!-- <a class="btn btn-secondary" href="{{ route('phonebook.show', $entry) }}">View</a>
                                     <a class="btn btn-primary" href="{{ route('phonebook.edit', $entry) }}">Edit</a>
                                     <form action="{{ route('phonebook.destroy', $entry) }}" method="POST" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form>
+                                    </form> -->
                                 </td>
                             </tr>
                         @endforeach
