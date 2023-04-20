@@ -14,7 +14,7 @@ use App\Http\Controllers\PhonebookController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('phonebook.index');
 });
 
 
