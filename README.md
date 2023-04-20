@@ -30,7 +30,7 @@ php artisan migrate --seed
 Run Project - `php artisan serve`
 
 ## Images
-<img src="https://raw.githubusercontent.com/saifuldhaka/phone-book/main/public/images/list.png" width="400">
+<img src="https://raw.githubusercontent.com/saifuldhaka/phone-book/main/public/images/list1.png" width="400">
 
 <img src="https://raw.githubusercontent.com/saifuldhaka/phone-book/main/public/images/create.png" width="400">
 
