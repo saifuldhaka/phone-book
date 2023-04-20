@@ -36,8 +36,8 @@
                       <tbody>
                           @foreach ($phonebook as $entry)
                               <tr>
-                                  <td>{{ $entry->last_name }}</td>
                                   <td>{{ $entry->first_name }}</td>
+                                  <td>{{ $entry->last_name }}</td>
                                   <td>{{ $entry->phone_type }}</td>
                                   <td>{{ $entry->number }}</td>
                                   <td>
