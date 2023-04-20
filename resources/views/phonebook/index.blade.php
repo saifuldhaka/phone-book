@@ -5,40 +5,42 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Phonebook</h1>
-                  <a class="btn btn-primary" href="{{ route('phonebook.index') }}">View All Contacts</a>
-                  <a class="btn btn-primary" href="{{ route('phonebook.create') }}">Create new contact</a>
-
                 <hr>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Last Name</th>
-                            <th>First Name</th>
-                            <th>Phone Type</th>
-                            <th>Number</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($phonebook as $entry)
-                            <tr>
-                                <td>{{ $entry->last_name }}</td>
-                                <td>{{ $entry->first_name }}</td>
-                                <td>{{ $entry->phone_type }}</td>
-                                <td>{{ $entry->number }}</td>
-                                <td>
-                                    <!-- <a class="btn btn-secondary" href="{{ route('phonebook.show', $entry) }}">View</a>
-                                    <a class="btn btn-primary" href="{{ route('phonebook.edit', $entry) }}">Edit</a>
-                                    <form action="{{ route('phonebook.destroy', $entry) }}" method="POST" style="display: inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form> -->
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <div style="overflow-x: auto;">
+                  <table class="table" >
+                      <thead>
+                          <tr>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>Phone Type</th>
+                              <th>Number</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          @foreach ($phonebook as $entry)
+                              <tr>
+                                  <td>{{ $entry->last_name }}</td>
+                                  <td>{{ $entry->first_name }}</td>
+                                  <td>{{ $entry->phone_type }}</td>
+                                  <td>{{ $entry->number }}</td>
+                                  <td>
+                                      <a class="btn-circle btn btn-secondary" href="{{ route('phonebook.show', $entry) }}"><i class="fa fa-eye"></i></a>
+                                      <a class="btn-circle btn btn-primary" href="{{ route('phonebook.edit', $entry) }}"><i class="fa fa-pencil" aria-hidden="true"></i>
+</a>
+                                      <form action="{{ route('phonebook.destroy', $entry) }}" method="POST" style="display: inline;">
+                                          @csrf
+                                          @method('DELETE')
+                                          <button type="submit" class="btn-circle btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+</i></button>
+                                      </form>
+                                  </td>
+                              </tr>
+                          @endforeach
+                      </tbody>
+                  </table>
+
+                </div>
 
 
                 <div class="d-flex justify-content-center">

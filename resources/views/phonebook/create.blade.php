@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <br/>
-                        <button type="submit" class="btn btn-primary">Create Entry</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Save</button>
                     </div>
 
                 </form>

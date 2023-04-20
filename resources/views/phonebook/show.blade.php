@@ -10,12 +10,15 @@
                 <p><strong>First Name:</strong> {{ $phonebook->first_name }}</p>
                 <p><strong>Phone Type:</strong> {{ $phonebook->phone_type }}</p>
                 <p><strong>Number:</strong> {{ $phonebook->number }}</p>
-                <a class="btn btn-secondary" href="{{ route('phonebook.index') }}">Back</a>
-                <a class="btn btn-primary" href="{{ route('phonebook.edit', $phonebook) }}">Edit</a>
+                <a class="btn-circle btn btn-secondary" href="{{ route('phonebook.index') }}"><i class="fa fa-angle-double-left" aria-hidden="true"></i>
+</a>
+                <a class="btn-circle btn btn-primary" href="{{ route('phonebook.edit', $phonebook) }}"><i class="fa fa-pencil" aria-hidden="true"></i>
+</a>
                 <form action="{{ route('phonebook.destroy', $phonebook) }}" method="POST" style="display: inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn-circle btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>
+</button>
                 </form>
             </div>
         </div>

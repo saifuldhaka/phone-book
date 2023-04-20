@@ -2,3 +2,22 @@ header {
     background-color: #eaeaea;
     padding: 10px;
 }
+nav{
+    width: 100%;
+  }
+.mr-auto, .mx-auto {
+  margin-right: auto!important;
+  width: 120px;
+  float: right;
+  margin: 0;
+}
+nav ul li{
+  text-align: center;
+}
+nav ul li  a {
+    width: 120px;
+}
+nav ul li.active a {
+    color: #424446;
+    border-bottom: 2px solid #424446;
+}

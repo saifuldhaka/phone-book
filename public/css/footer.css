@@ -6,3 +6,7 @@ footer{
   padding: 20px 0;
   margin-top: 50px;
 }
+footer ul li a {
+    color: #424446;
+    text-decoration: none;
+}

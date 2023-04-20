@@ -1,0 +1,23 @@
+.btn-circle {
+  border-radius: 50% !important;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
