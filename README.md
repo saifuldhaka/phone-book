@@ -1,4 +1,4 @@
-# Phonebook System - Laravel 7.x
+# Phonebook System - Laravel 8.x
 
 A project which manage to manage you phonebook and manage the phone indexing.
 

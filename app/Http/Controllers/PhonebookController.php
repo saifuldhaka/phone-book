@@ -17,9 +17,13 @@ class PhonebookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $phonebook = Phonebook::paginate(20);
+      $search = $request->search;
+      $phonebook = Phonebook::where('first_name', 'like', '%'.$search.'%')
+                              ->orWhere('last_name', 'like', '%'.$search.'%')
+                              ->paginate(20);
+                              
       return view('phonebook.index', compact('phonebook'));
     }
 
